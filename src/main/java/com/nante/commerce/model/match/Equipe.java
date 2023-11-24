@@ -9,8 +9,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 
 @Entity
@@ -20,9 +18,8 @@ public class Equipe extends GenericModel {
     int id;
 
     String nom;
+    @ManyToMany(mappedBy = "equipe", cascade = CascadeType.ALL)
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "joueur_equipe", joinColumns = @JoinColumn(name = "id_equipe"), inverseJoinColumns = @JoinColumn(name = "id_joueur"))
     List<Joueur> joueurs;
 
     public int getId() {

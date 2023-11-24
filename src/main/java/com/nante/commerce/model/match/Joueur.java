@@ -1,6 +1,6 @@
 package com.nante.commerce.model.match;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.nante.commerce.crud.model.GenericModel;
 
 import jakarta.persistence.CascadeType;
@@ -9,7 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Joueur extends GenericModel {
@@ -22,9 +22,9 @@ public class Joueur extends GenericModel {
     double masse;
     double taille;
 
-    @JsonProperty(access = JsonProperty.Access.AUTO)
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_equipe", insertable = false)
+    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_equipe")
     Equipe equipe;
 
     String photoUrl;

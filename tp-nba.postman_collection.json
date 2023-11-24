@@ -1,0 +1,1151 @@
+{
+	"info": {
+		"_postman_id": "dd2bbcd9-5469-4c75-abd6-bdbb60542f89",
+		"name": "tp-nba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31254493"
+	},
+	"item": [
+		{
+			"name": "equipe",
+			"item": [
+				{
+					"name": "findEquipeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/equipes/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"equipes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllEquipe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "insertEquipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\" : \"test\",\r\n    \"joueurs\" : [\r\n        {\r\n            \"nom\": \"test2\",\r\n            \"prenom\": \"test2\",\r\n            \"masse\" : 2,\r\n            \"taille\" : 10,\r\n            \"photourl\" : \"https://cdn.nba.com/headshots/nba/latest/260x190/201142.png\"\r\n            \r\n        },\r\n        {\r\n            \"nom\": \"test\",\r\n            \"prenom\": \"test\",\r\n            \"masse\" : 2,\r\n            \"taille\" : 10,\r\n            \"photourl\" : \"https://cdn.nba.com/headshots/nba/latest/260x190/201142.png\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/equipes",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"equipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEquipe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"PHX\"\r\n}"
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/equipes/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"equipes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEquipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/equipes/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"equipes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "joueur",
+			"item": [
+				{
+					"name": "findAllJoueur",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "findJoueurById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/joueurs/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"joueurs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertJoueur",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"test\",\r\n    \"prenom\": \"test\",\r\n    \"masse\" : 2,\r\n    \"taille\" : 10,\r\n    \"photourl\" : \"https://cdn.nba.com/headshots/nba/latest/260x190/201142.png\",\r\n    \"equipe\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/joueurs",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"joueurs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateJoueur",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\": \"test\",\r\n    \"prenom\": \"test\",\r\n    \"masse\" : 2,\r\n    \"taille\" : 10,\r\n    \"photourl\" : \"https://cdn.nba.com/headshots/nba/latest/260x190/201142.png\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/joueurs/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"joueurs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteJoueur",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/joueurs/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"joueurs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "partie",
+			"item": [
+				{
+					"name": "findAllPartie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/parties",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"parties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findPartieById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/parties/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"parties",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertPartie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jour\" : \"2021-01-01\",\r\n    \"equipe1\" : {\r\n        \"id\" : 1\r\n    },\r\n    \"equipe2\" : {\r\n        \"id\" : 2\r\n    }\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/parties",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"parties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePartie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jour\" : \"2021-01-01\",\r\n    \"equipe1\" : {\r\n        \"id\" : 1\r\n    },\r\n    \"equipe2\" : {\r\n        \"id\" : 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/parties/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"parties",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePartie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/parties/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"parties",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passe-decisive",
+			"item": [
+				{
+					"name": "findAllPasseD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/passe-decisive",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"passe-decisive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findPasseDById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "insertPasseD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"chrono\" : \"00:02:02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/passe-decisive",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"passe-decisive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePasseD",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/passe-decisive/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"passe-decisive",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePasseD",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/passe-decisive/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"passe-decisive",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "point",
+			"item": [
+				{
+					"name": "findAllPoint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/points",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"points"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findPointById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/points/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"points",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertPoint",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"valeur\" : 2,\r\n    \"chrono\" : \"00:10:01\",\r\n    \"success\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/points",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"points"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePoint",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"valeur\" : 2,\r\n    \"success\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/points/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"points",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePoint",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/points/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"points",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rebond",
+			"item": [
+				{
+					"name": "findAllRebond",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/rebonds",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"rebonds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findRebondById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/rebonds/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"rebonds",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertRebond",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 1\r\n    },\r\n    \"chrono\" : \"00:10:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/rebonds",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"rebonds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRebond",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/rebonds/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"rebonds",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRebond",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/rebonds/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"rebonds",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "quart-temps",
+			"item": [
+				{
+					"name": "findAllQT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/quart-temps",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"quart-temps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findQTById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/quart-temps/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"quart-temps",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertQT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/quart-temps",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"quart-temps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/quart-temps/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"quart-temps",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/quart-temps/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"quart-temps",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "stats",
+			"item": [
+				{
+					"name": "findAllStats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/stats",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findStatsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/stats/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"stats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertStats",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/stats",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStats",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/stats/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"stats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteStats",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/stats/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"stats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "temps-passe",
+			"item": [
+				{
+					"name": "findAllTempsPasse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/temps-passe",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"temps-passe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findTempsPasseById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080//temps-passe/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"temps-passe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertTempsPasse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"chronoEntre\" : \"00:10:05\",\r\n    \"chronoSortie\" : \"00:12:11\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/temps-passe",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"temps-passe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTempsPasse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"joueur\":{\r\n        \"id\" : 1\r\n    },\r\n    \"partie\":{\r\n        \"id\" : 2\r\n    },\r\n    \"quartTemps\" : {\r\n        \"id\" : 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.163.147.58:8080/temps-passe/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"temps-passe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTempsPasse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://34.163.147.58:8080/temps-passe/1",
+							"protocol": "http",
+							"host": [
+								"34",
+								"163",
+								"147",
+								"58"
+							],
+							"port": "8080",
+							"path": [
+								"temps-passe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
